@@ -60,3 +60,24 @@ default_commands:
             type: binary
             bit: 72
             val: 0B01004291BB5990C1
+      - name: "REQ_SET_TX_ALLOW_ALWAYS"
+        port: 19
+        arguments:
+          - name: command_id
+            type: binary
+            bit: 40
+            val: 0B010011E4
+          - name: state
+            type: enum
+            choices:
+              - [0, "false"]
+              - [1, "true"]
+      - name: "REQ_SET_TX_ALLOW_TIME"
+        port: 19
+        arguments:
+          - name: command_id
+            type: binary
+            bit: 40
+            val: 0B010031E5
+          - name: duration_s
+            bit: 16
