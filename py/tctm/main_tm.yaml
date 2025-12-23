@@ -1173,6 +1173,30 @@ containers:
       - name: "CRC32_OF_LAST_CFG_CRC"
         type: binary
         bit: 32
+  - name: GET_SYSTEM_HK_HISTORY_CMD_REPLY
+    base: "main_container"
+    endian: true
+    conditions:
+      - name: "../csp_sport"
+        val: 15
+      - name: "MAIN/telemetry_id"
+        val: 1
+    parameters:
+      - name: "ERROR_CODE_OF_GET_SYSTEM_HK_HISTORY"
+        signed: true
+        bit: 32
+  - name: CANCEL_SYSTEM_HK_HISTORY_CMD_REPLY
+    base: "main_container"
+    endian: true
+    conditions:
+      - name: "../csp_sport"
+        val: 15
+      - name: "MAIN/telemetry_id"
+        val: 2
+    parameters:
+      - name: "ERROR_CODE_OF_CANCEL_SYSTEM_HK_HISTORY"
+        signed: true
+        bit: 32
   - name: CLEAR_BOOT_COUNT_CMD_REPLY
     base: "main_container"
     endian: true
@@ -1210,5 +1234,17 @@ containers:
         val: 255
     parameters:
       - name: "ERROR_CODE_OF_UNKNOWN_CLEAR_BOOT_COUNT"
+        signed: true
+        bit: 32
+  - name: CLEAR_TLM_SEQ_NUM_CMD_REPLY
+    base: "main_container"
+    endian: true
+    conditions:
+      - name: "../csp_sport"
+        val: 16
+      - name: "MAIN/telemetry_id"
+        val: 2
+    parameters:
+      - name: "ERROR_CODE_OF_CLEAR_TLM_SEQ_NUM"
         signed: true
         bit: 32

@@ -226,6 +226,28 @@ default_commands:
           - name: "command_id"
             bit: 8
             val: 0
+      - name: "GET_SYSTEM_HK_HISTORY"
+        port: 15
+        endian: true
+        arguments:
+          - name: "command_id"
+            bit: 8
+            val: 1
+          - name: "start_seq_No"
+            bit: 32
+          - name: "end_seq_No"
+            bit: 32
+          - name: "skip_count"
+            bit: 16
+          - name: "interval_ms"
+            bit: 16
+      - name: "CANCEL_SYSTEM_HK_HISTORY"
+        port: 15
+        endian: true
+        arguments:
+          - name: "command_id"
+            bit: 8
+            val: 2
       - name: "CLEAR_BOOT_COUNT"
         port: 16
         arguments:
@@ -242,3 +264,9 @@ default_commands:
           - name: "address"
             type: binary
             bit: 32
+      - name: "CLEAR_TLM_SEQ_NUM"
+        port: 16
+        arguments:
+          - name: "command_id"
+            bit: 8
+            val: 2
