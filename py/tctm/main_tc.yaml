@@ -242,3 +242,35 @@ default_commands:
           - name: "address"
             type: binary
             bit: 32
+      - name: "MTQ_CTRL_CMD"
+        port: 17
+        endian: true
+        arguments:
+          - name: "command_id"
+            bit: 8
+            val: 0
+          - name: "axes"
+            type: enum
+            choices:
+              - [0, "MAIN_X"]
+              - [1, "MAIN_Y"]
+              - [2, "MAIN_Z"]
+              - [3, "BKUP_X"]
+              - [4, "BKUP_Y"]
+              - [5, "BKUP_Z"]
+          - name: "polarity"
+            type: enum
+            choices:
+              - [0, "PLUS"]
+              - [1, "MINUS"]
+              - [2, "NON"]
+          - name: "duty"
+            type: enum
+            choices:
+              - [0, "0"]
+              - [20, "20"]
+              - [40, "40"]
+              - [60, "60"]
+              - [80, "80"]
+              - [100, "100"]
+              - [120, "120 for test"]
