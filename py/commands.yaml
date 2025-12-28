@@ -1,0 +1,74 @@
+
+yamcs_url: "http://localhost:8090"
+yamcs_instance: "scsat"
+yamcs_processor: "realtime"
+
+loop_interval_s: 3600
+
+commands:
+  - name: "SRS3/REQ_SET_TX_ALLOW_TIME"
+    params:
+      command_id: 0B010031E5
+      duration_s: 480
+    wait: 1000
+
+  - name: "EPS/REQ_RESET_GWDT"
+    params:
+      command_id: 0
+      magic_num: 30868
+    wait: 300
+
+  - name: "SRS3/REQ_RESET_GWDT"
+    params:
+      command_id: 0B01004291BB5990C1 
+    wait: 300
+    
+  - name: "MAIN/GET_SYSTEM_HK"
+    params:
+      command_id: 0
+    wait: 1000
+
+  - name: "SRS3/REQ_SYSUP_TIME"
+    wait: 300
+
+  - name: "SRS3/REQ_PROP_LIST_SYS_GRP"
+    params:
+      command_id: 0101F6000280
+    wait: 300
+
+  - name: "SRS3/REQ_PROP_LIST_TM_GRP"
+    params:
+      command_id: 0101C8000480
+    wait: 300
+
+  - name: "SRS3/REQ_PROP_LIST_TX_GRP"
+    params:
+      command_id: 0101C8000180
+    wait: 300
+
+  - name: "SRS3/REQ_PROP_LIST_RX_GRP"
+    params:
+      command_id: 0101C8000200 
+    wait: 300
+
+  - name: "EPS/REQ_GENERAL_TELEMETRY"
+    params:
+      command_id: 0
+    wait: 300
+
+  - name: "EPS/REQ_STARTUP_TELEMETRY"
+    params:
+      command_id: 1
+    wait: 300
+
+#  - name: "EPS/REQ_FILE_INFO"
+#    params:
+#      command_id: 0
+#      file_id: 10
+#    wait: 300
+
+#  - name: "EPS/REQ_FILE_INFO"
+#    params:
+#      command_id: 0
+#      file_id: 7 
+#    wait: 300
