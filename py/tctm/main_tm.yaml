@@ -284,34 +284,34 @@ containers:
       - name: "IO_BOARD_3V3_VOLT"
         endian: true
         bit: 32
-      - name: "MAGNETOMETER_Y_P_SENSOR_STATUS"
+      - name: "MAGNETOMETER_X_P_SENSOR_STATUS"
         bit: 8
         signed: true
-      - name: "MAGNETOMETER_Y_P_X_OUT"
+      - name: "MAGNETOMETER_X_P_X_OUT"
         bit: 16
-      - name: "MAGNETOMETER_Y_P_Y_OUT"
+      - name: "MAGNETOMETER_X_P_Y_OUT"
         bit: 16
-      - name: "MAGNETOMETER_Y_P_Z_OUT"
+      - name: "MAGNETOMETER_X_P_Z_OUT"
         bit: 16
-      - name: "MAGNETOMETER_Y_M_SENSOR_STATUS"
+      - name: "MAGNETOMETER_X_M_SENSOR_STATUS"
         bit: 8
         signed: true
-      - name: "MAGNETOMETER_Y_M_X_OUT"
+      - name: "MAGNETOMETER_X_M_X_OUT"
         bit: 16
-      - name: "MAGNETOMETER_Y_M_Y_OUT"
+      - name: "MAGNETOMETER_X_M_Y_OUT"
         bit: 16
-      - name: "MAGNETOMETER_Y_M_Z_OUT"
+      - name: "MAGNETOMETER_X_M_Z_OUT"
         bit: 16
-      - name: "TEMP_ON_MAGNETOMETER_Y_P_SENSOR_STATUS"
+      - name: "TEMP_ON_MAGNETOMETER_X_P_SENSOR_STATUS"
         bit: 8
         signed: true
-      - name: "TEMP_ON_MAGNETOMETER_Y_P"
+      - name: "TEMP_ON_MAGNETOMETER_X_P"
         type: float
         bit: 32
-      - name: "TEMP_ON_MAGNETOMETER_Y_M_SENSOR_STATUS"
+      - name: "TEMP_ON_MAGNETOMETER_X_M_SENSOR_STATUS"
         bit: 8
         signed: true
-      - name: "TEMP_ON_MAGNETOMETER_Y_M"
+      - name: "TEMP_ON_MAGNETOMETER_X_M"
         type: float
         bit: 32
       - name: "SUN_SENSOR_Y_P_SENSOR_STATUS"
